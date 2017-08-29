@@ -3,8 +3,6 @@
 import sys
 
 
-restaurants = {}
-
 def import_and_split():
 
     restaurants = {}
@@ -18,12 +16,14 @@ def import_and_split():
     return restaurants
 
 
-def sorting_restaurants(dict):
+
+def sorting_restaurants(restaurants):
 
     for name_of_restaurant in sorted(restaurants):
-        return '{} is rated at {}.'.format(name_of_restaurant, restaurants[name_of_restaurant])
+        print '{} is rated at {}.'.format(name_of_restaurant, restaurants[name_of_restaurant])
 
 
-sorting_restaurants(restaurants)
+restaurant_rating = import_and_split()
+sorting_restaurants(restaurant_rating)
 
 
