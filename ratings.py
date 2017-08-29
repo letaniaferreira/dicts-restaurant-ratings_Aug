@@ -16,6 +16,13 @@ def import_and_split():
     return restaurants
 
 
+def add_rating(restaurants):
+
+    new_restaurant = raw_input("Please enter a restaurant name! ")
+    new_score = raw_input("What rating would you like to give this restaurant? ")
+    new_restaurant = new_restaurant.capitalize()
+    restaurants[new_restaurant] = new_score
+
 
 def sorting_restaurants(restaurants):
 
@@ -24,6 +31,7 @@ def sorting_restaurants(restaurants):
 
 
 restaurant_rating = import_and_split()
+add_rating(restaurant_rating)
 sorting_restaurants(restaurant_rating)
 
 
